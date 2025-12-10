@@ -3,438 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kos Island - Greek Paradise | Tourist Information & Best Time to Visit</title>
+    <title>Kos Island - Greek Paradise | Tourist Information</title>
+    
+    <!-- Google AdSense Script -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2258794169769277"
+     crossorigin="anonymous"></script>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Complete guide to Kos Island Greece. Best months to visit, weather information, tourist attractions, beaches, and travel tips for Kos Island.">
+    <meta name="keywords" content="Kos Island, Greece, Greek islands, Kos weather, Kos tourism, best time to visit Kos, Kos beaches, travel guide">
+    
+    <!-- Fonts and Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto+Slab:wght@400;500&display=swap" rel="stylesheet">
+    
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: 'Poppins', sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background-color: #f9f9f9;
-        }
-        
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        
-        /* Header Styles */
-        header {
-            background: linear-gradient(to right, #1e5799, #207cca);
-            color: white;
-            padding: 20px 0;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-        }
-        
-        .header-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
-        
-        .logo h1 {
-            font-family: 'Roboto Slab', serif;
-            font-size: 1.8rem;
-            font-weight: 600;
-        }
-        
-        .logo i {
-            font-size: 2.5rem;
-            color: #FFD700;
-        }
-        
-        .tagline {
-            font-size: 0.9rem;
-            opacity: 0.9;
-            margin-top: 5px;
-        }
-        
-        /* Ad Banner Styles */
-        .ad-banner {
-            background-color: #f5f5f5;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            padding: 15px;
-            margin: 20px 0;
-            text-align: center;
-            min-height: 100px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-        
-        .ad-label {
-            font-size: 0.8rem;
-            color: #666;
-            margin-bottom: 8px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-        
-        .ad-banner.horizontal {
-            height: 90px;
-        }
-        
-        .ad-banner.vertical {
-            height: 250px;
-            width: 300px;
-            float: right;
-            margin-left: 25px;
-            margin-bottom: 25px;
-        }
-        
-        .ad-placeholder {
-            color: #777;
-            font-size: 0.9rem;
-        }
-        
-        .ad-placeholder i {
-            font-size: 2rem;
-            margin-bottom: 10px;
-            color: #1e5799;
-        }
-        
-        /* Main Content Styles */
-        .main-content {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 30px;
-            margin: 30px 0;
-        }
-        
-        .content-column {
-            flex: 1;
-            min-width: 300px;
-        }
-        
-        /* Weather Link Section */
-        .weather-link-section {
-            background-color: white;
-            border-radius: 10px;
-            padding: 25px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-            margin-bottom: 30px;
-        }
-        
-        .section-title {
-            color: #1e5799;
-            font-size: 1.5rem;
-            margin-bottom: 20px;
-            padding-bottom: 10px;
-            border-bottom: 2px solid #f0f0f0;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        
-        .section-title i {
-            color: #FF8C00;
-        }
-        
-        .weather-link-container {
-            background-color: #f0f7ff;
-            border-radius: 8px;
-            padding: 25px;
-            text-align: center;
-            margin-top: 15px;
-        }
-        
-        .weather-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 12px;
-            background: linear-gradient(to right, #1e5799, #207cca);
-            color: white;
-            padding: 15px 30px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 1.1rem;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 12px rgba(30, 87, 153, 0.2);
-        }
-        
-        .weather-link:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 6px 18px rgba(30, 87, 153, 0.3);
-        }
-        
-        .weather-link i {
-            font-size: 1.3rem;
-        }
-        
-        .weather-note {
-            margin-top: 20px;
-            font-size: 0.9rem;
-            color: #666;
-            font-style: italic;
-        }
-        
-        /* Best Months Section */
-        .best-months-section {
-            background-color: white;
-            border-radius: 10px;
-            padding: 25px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-            margin-bottom: 30px;
-        }
-        
-        .months-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-            gap: 15px;
-            margin-top: 20px;
-        }
-        
-        .month-card {
-            background-color: #f8f9fa;
-            border-radius: 8px;
-            padding: 20px;
-            text-align: center;
-            transition: all 0.3s ease;
-            border: 1px solid #eee;
-        }
-        
-        .month-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-        }
-        
-        .month-card.best {
-            background-color: #e8f4ff;
-            border: 2px solid #1e5799;
-        }
-        
-        .month-card.good {
-            background-color: #f0f8f0;
-            border: 1px solid #4CAF50;
-        }
-        
-        .month-card.ok {
-            background-color: #fff8e8;
-            border: 1px solid #FF9800;
-        }
-        
-        .month-name {
-            font-weight: 600;
-            font-size: 1.2rem;
-            margin-bottom: 10px;
-            color: #333;
-        }
-        
-        .month-rating {
-            display: flex;
-            justify-content: center;
-            margin-bottom: 12px;
-        }
-        
-        .month-rating i {
-            color: #FFD700;
-            margin: 0 2px;
-        }
-        
-        .month-desc {
-            font-size: 0.85rem;
-            color: #555;
-            margin-bottom: 8px;
-        }
-        
-        .month-highlight {
-            font-size: 0.8rem;
-            padding: 4px 8px;
-            border-radius: 4px;
-            display: inline-block;
-            margin-top: 5px;
-            font-weight: 500;
-        }
-        
-        .temp-high {
-            background-color: #ffebee;
-            color: #c62828;
-        }
-        
-        .temp-perfect {
-            background-color: #e8f5e9;
-            color: #2e7d32;
-        }
-        
-        .price-high {
-            background-color: #fff3e0;
-            color: #ef6c00;
-        }
-        
-        .price-moderate {
-            background-color: #fff8e1;
-            color: #f57f17;
-        }
-        
-        .price-low {
-            background-color: #f1f8e9;
-            color: #689f38;
-        }
-        
-        /* Info Cards */
-        .info-card {
-            background-color: white;
-            border-radius: 10px;
-            padding: 25px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-            margin-bottom: 30px;
-        }
-        
-        .info-card ul {
-            list-style-type: none;
-            padding-left: 5px;
-        }
-        
-        .info-card li {
-            padding: 12px 0;
-            border-bottom: 1px solid #f0f0f0;
-            display: flex;
-            align-items: center;
-        }
-        
-        .info-card li:last-child {
-            border-bottom: none;
-        }
-        
-        .info-card li i {
-            color: #1e5799;
-            margin-right: 15px;
-            font-size: 1.2rem;
-            width: 25px;
-        }
-        
-        /* Links Section */
-        .links-section {
-            background-color: white;
-            border-radius: 10px;
-            padding: 25px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-        }
-        
-        .links-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 15px;
-            margin-top: 15px;
-        }
-        
-        .link-item {
-            display: flex;
-            align-items: center;
-            padding: 12px 15px;
-            background-color: #f8f9fa;
-            border-radius: 8px;
-            text-decoration: none;
-            color: #333;
-            transition: all 0.3s ease;
-        }
-        
-        .link-item:hover {
-            background-color: #e9f2ff;
-            transform: translateY(-3px);
-        }
-        
-        .link-item i {
-            color: #1e5799;
-            margin-right: 12px;
-            font-size: 1.2rem;
-        }
-        
-        /* Footer */
-        footer {
-            background-color: #333;
-            color: white;
-            padding: 30px 0;
-            margin-top: 40px;
-            text-align: center;
-        }
-        
-        .footer-content {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        
-        .footer-links {
-            display: flex;
-            gap: 25px;
-            margin-top: 20px;
-            margin-bottom: 25px;
-        }
-        
-        .footer-links a {
-            color: #ddd;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-        
-        .footer-links a:hover {
-            color: white;
-        }
-        
-        .copyright {
-            font-size: 0.9rem;
-            color: #aaa;
-            margin-top: 15px;
-        }
-        
-        /* Responsive Design */
-        @media (max-width: 992px) {
-            .ad-banner.vertical {
-                float: none;
-                width: 100%;
-                height: 100px;
-                margin-left: 0;
-                margin-bottom: 20px;
-            }
-            
-            .months-grid {
-                grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-            }
-        }
-        
-        @media (max-width: 768px) {
-            .header-content {
-                flex-direction: column;
-                text-align: center;
-                gap: 15px;
-            }
-            
-            .main-content {
-                flex-direction: column;
-            }
-            
-            .weather-link {
-                padding: 12px 20px;
-                font-size: 1rem;
-            }
-            
-            .footer-links {
-                flex-direction: column;
-                gap: 15px;
-            }
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Poppins', sans-serif; line-height: 1.6; color: #333; background-color: #f9f9f9; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        header { background: linear-gradient(to right, #1e5799, #207cca); color: white; padding: 20px 0; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+        .header-content { display: flex; justify-content: space-between; align-items: center; }
+        .logo { display: flex; align-items: center; gap: 15px; }
+        .logo h1 { font-family: 'Roboto Slab', serif; font-size: 1.8rem; font-weight: 600; }
+        .logo i { font-size: 2.5rem; color: #FFD700; }
+        .tagline { font-size: 0.9rem; opacity: 0.9; margin-top: 5px; }
+        .ad-banner { background-color: #f5f5f5; border: 1px solid #ddd; border-radius: 8px; padding: 15px; margin: 20px 0; text-align: center; min-height: 100px; display: flex; flex-direction: column; justify-content: center; align-items: center; }
+        .ad-label { font-size: 0.8rem; color: #666; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 1px; }
+        .ad-banner.horizontal { height: 90px; }
+        .ad-banner.vertical { height: 250px; width: 300px; float: right; margin-left: 25px; margin-bottom: 25px; }
+        @media (max-width: 992px) { .ad-banner.vertical { float: none; width: 100%; height: 100px; margin-left: 0; } }
+        .ad-placeholder { color: #777; font-size: 0.9rem; }
+        .ad-placeholder i { font-size: 2rem; margin-bottom: 10px; color: #1e5799; }
+        .main-content { display: flex; flex-wrap: wrap; gap: 30px; margin: 30px 0; }
+        .content-column { flex: 1; min-width: 300px; }
+        .weather-link-section, .best-months-section, .info-card, .links-section { background-color: white; border-radius: 10px; padding: 25px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); margin-bottom: 30px; }
+        .section-title { color: #1e5799; font-size: 1.5rem; margin-bottom: 20px; padding-bottom: 10px; border-bottom: 2px solid #f0f0f0; display: flex; align-items: center; gap: 10px; }
+        .section-title i { color: #FF8C00; }
+        .weather-link-container { background-color: #f0f7ff; border-radius: 8px; padding: 25px; text-align: center; margin-top: 15px; }
+        .weather-link { display: inline-flex; align-items: center; gap: 12px; background: linear-gradient(to right, #1e5799, #207cca); color: white; padding: 15px 30px; border-radius: 50px; text-decoration: none; font-weight: 500; font-size: 1.1rem; transition: all 0.3s ease; box-shadow: 0 4px 12px rgba(30,87,153,0.2); }
+        .weather-link:hover { transform: translateY(-3px); box-shadow: 0 6px 18px rgba(30,87,153,0.3); }
+        .months-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 15px; margin-top: 20px; }
+        .month-card { background-color: #f8f9fa; border-radius: 8px; padding: 20px; text-align: center; transition: all 0.3s ease; border: 1px solid #eee; }
+        .month-card:hover { transform: translateY(-5px); box-shadow: 0 8px 16px rgba(0,0,0,0.1); }
+        .month-card.best { background-color: #e8f4ff; border: 2px solid #1e5799; }
+        .month-card.good { background-color: #f0f8f0; border: 1px solid #4CAF50; }
+        .month-name { font-weight: 600; font-size: 1.2rem; margin-bottom: 10px; color: #333; }
+        .month-rating { display: flex; justify-content: center; margin-bottom: 12px; }
+        .month-rating i { color: #FFD700; margin: 0 2px; }
+        .info-card ul { list-style-type: none; padding-left: 5px; }
+        .info-card li { padding: 12px 0; border-bottom: 1px solid #f0f0f0; display: flex; align-items: center; }
+        .info-card li:last-child { border-bottom: none; }
+        .info-card li i { color: #1e5799; margin-right: 15px; font-size: 1.2rem; width: 25px; }
+        .links-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 15px; margin-top: 15px; }
+        .link-item { display: flex; align-items: center; padding: 12px 15px; background-color: #f8f9fa; border-radius: 8px; text-decoration: none; color: #333; transition: all 0.3s ease; }
+        .link-item:hover { background-color: #e9f2ff; transform: translateY(-3px); }
+        footer { background-color: #333; color: white; padding: 30px 0; margin-top: 40px; text-align: center; }
+        @media (max-width: 768px) { .header-content { flex-direction: column; text-align: center; gap: 15px; } .main-content { flex-direction: column; } }
     </style>
 </head>
 <body>
-    <!-- Header with horizontal ad banner -->
     <header>
         <div class="container">
             <div class="header-content">
@@ -445,14 +72,12 @@
                         <p class="tagline">Your complete summer destination in the Aegean Sea</p>
                     </div>
                 </div>
-                
-                <!-- Horizontal Ad Banner 1 -->
                 <div class="ad-banner horizontal">
                     <div class="ad-label">Advertisement</div>
                     <div class="ad-placeholder">
                         <i class="fas fa-ad"></i>
                         <p>Travel agency ad - Book your Kos trip now!</p>
-                        <p style="font-size: 0.7rem; margin-top: 5px;">(This is a placeholder for your ad)</p>
+                        <p style="font-size: 0.7rem; margin-top: 5px;">AdSense ads will appear here</p>
                     </div>
                 </div>
             </div>
@@ -460,142 +85,90 @@
     </header>
 
     <div class="container">
-        <!-- Vertical Ad Banner -->
         <div class="ad-banner vertical">
             <div class="ad-label">Sponsored</div>
             <div class="ad-placeholder">
                 <i class="fas fa-hotel"></i>
                 <p>Hotel & Accommodation Ads</p>
-                <p style="font-size: 0.7rem; margin-top: 5px;">(Ad space for rent)</p>
+                <p style="font-size: 0.7rem; margin-top: 5px;">AdSense ads will appear here</p>
             </div>
         </div>
         
         <div class="main-content">
-            <!-- Left Column: Weather Link & Quick Info -->
             <div class="content-column">
-                <!-- Weather Link Section -->
                 <section class="weather-link-section">
                     <h2 class="section-title"><i class="fas fa-cloud-sun"></i> Kos Island Weather</h2>
-                    <p>For the most accurate and up-to-date weather forecast for Kos Island, click the link below:</p>
-                    
+                    <p>For accurate weather forecast for Kos Island:</p>
                     <div class="weather-link-container">
                         <a href="https://meteo.gr/cf-en.cfm?city_id=18" class="weather-link" target="_blank">
                             <i class="fas fa-external-link-alt"></i>
                             Check Kos Weather on Meteo.gr
                         </a>
-                        <p class="weather-note">Meteo.gr provides detailed forecasts including temperature, wind, and sea conditions for Kos Island.</p>
+                        <p style="margin-top: 20px; font-size: 0.9rem; color: #666; font-style: italic;">Meteo.gr provides detailed forecasts including temperature, wind, and sea conditions.</p>
                     </div>
                 </section>
                 
-                <!-- Best Months Section -->
                 <section class="best-months-section">
                     <h2 class="section-title"><i class="fas fa-calendar-alt"></i> Best Months to Visit Kos</h2>
                     <p>Plan your trip based on weather, crowds, and prices:</p>
-                    
                     <div class="months-grid">
-                        <!-- May - Excellent -->
                         <div class="month-card best">
                             <div class="month-name">May</div>
-                            <div class="month-rating">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                            <div class="month-desc">Pleasant weather, fewer crowds</div>
-                            <div class="month-desc">Businesses: Most open</div>
-                            <span class="month-highlight temp-perfect">Perfect temperature</span>
-                            <span class="month-highlight price-moderate">Moderate prices</span>
+                            <div class="month-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                            <div>Pleasant weather, fewer crowds</div>
+                            <div>Most businesses open</div>
+                            <div style="margin-top: 10px; font-size: 0.85rem; color: #2e7d32;">✓ Perfect temperature</div>
+                            <div style="font-size: 0.85rem; color: #f57f17;">✓ Moderate prices</div>
                         </div>
-                        
-                        <!-- June - Excellent -->
                         <div class="month-card best">
                             <div class="month-name">June</div>
-                            <div class="month-rating">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                            <div class="month-desc">Great beach weather, pre-peak</div>
-                            <div class="month-desc">Businesses: All open</div>
-                            <span class="month-highlight temp-perfect">Perfect temperature</span>
-                            <span class="month-highlight price-moderate">Moderate prices</span>
+                            <div class="month-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                            <div>Great beach weather, pre-peak</div>
+                            <div>All businesses open</div>
+                            <div style="margin-top: 10px; font-size: 0.85rem; color: #2e7d32;">✓ Perfect temperature</div>
+                            <div style="font-size: 0.85rem; color: #f57f17;">✓ Moderate prices</div>
                         </div>
-                        
-                        <!-- September - Excellent -->
                         <div class="month-card best">
                             <div class="month-name">September</div>
-                            <div class="month-rating">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                            <div class="month-desc">Warm sea, fewer tourists</div>
-                            <div class="month-desc">Businesses: All open</div>
-                            <span class="month-highlight temp-perfect">Perfect temperature</span>
-                            <span class="month-highlight price-moderate">Moderate prices</span>
+                            <div class="month-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                            <div>Warm sea, fewer tourists</div>
+                            <div>All businesses open</div>
+                            <div style="margin-top: 10px; font-size: 0.85rem; color: #2e7d32;">✓ Perfect temperature</div>
+                            <div style="font-size: 0.85rem; color: #f57f17;">✓ Moderate prices</div>
                         </div>
-                        
-                        <!-- July - Good -->
                         <div class="month-card good">
                             <div class="month-name">July</div>
-                            <div class="month-rating">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                            <div class="month-desc">Peak season, vibrant nightlife</div>
-                            <div class="month-desc">Businesses: All open</div>
-                            <span class="month-highlight temp-high">Hot weather</span>
-                            <span class="month-highlight price-high">High prices</span>
+                            <div class="month-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                            <div>Peak season, vibrant nightlife</div>
+                            <div>All businesses open</div>
+                            <div style="margin-top: 10px; font-size: 0.85rem; color: #c62828;">✓ Hot weather</div>
+                            <div style="font-size: 0.85rem; color: #ef6c00;">✓ High prices</div>
                         </div>
-                        
-                        <!-- August - Good -->
                         <div class="month-card good">
                             <div class="month-name">August</div>
-                            <div class="month-rating">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                            <div class="month-desc">Hottest month, busiest time</div>
-                            <div class="month-desc">Businesses: All open</div>
-                            <span class="month-highlight temp-high">Very hot</span>
-                            <span class="month-highlight price-high">Highest prices</span>
+                            <div class="month-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                            <div>Hottest month, busiest time</div>
+                            <div>All businesses open</div>
+                            <div style="margin-top: 10px; font-size: 0.85rem; color: #c62828;">✓ Very hot</div>
+                            <div style="font-size: 0.85rem; color: #ef6c00;">✓ Highest prices</div>
                         </div>
-                        
-                        <!-- October - Good -->
                         <div class="month-card good">
                             <div class="month-name">October</div>
-                            <div class="month-rating">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                            <div class="month-desc">Mild weather, closing season</div>
-                            <div class="month-desc">Businesses: Some close</div>
-                            <span class="month-highlight temp-perfect">Pleasant temperature</span>
-                            <span class="month-highlight price-low">Low prices</span>
+                            <div class="month-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                            <div>Mild weather, closing season</div>
+                            <div>Some businesses close</div>
+                            <div style="margin-top: 10px; font-size: 0.85rem; color: #2e7d32;">✓ Pleasant temperature</div>
+                            <div style="font-size: 0.85rem; color: #689f38;">✓ Low prices</div>
                         </div>
                     </div>
-                    
                     <div style="margin-top: 25px; padding: 15px; background-color: #f0f7ff; border-radius: 8px;">
                         <h3 style="color: #1e5799; margin-bottom: 10px;"><i class="fas fa-lightbulb"></i> Travel Tip</h3>
-                        <p><strong>Best balance:</strong> May, June, and September offer the ideal combination of great weather, open businesses, and reasonable prices with fewer crowds than peak summer months.</p>
+                        <p><strong>Best balance:</strong> May, June, and September offer ideal weather, open businesses, reasonable prices, and fewer crowds.</p>
                     </div>
                 </section>
             </div>
             
-            <!-- Right Column: Must-See & Links -->
             <div class="content-column">
-                <!-- Quick Info Section -->
                 <section class="info-card">
                     <h2 class="section-title"><i class="fas fa-info-circle"></i> Quick Tourist Information</h2>
                     <ul>
@@ -608,7 +181,6 @@
                     </ul>
                 </section>
                 
-                <!-- Must-See Section -->
                 <section class="info-card">
                     <h2 class="section-title"><i class="fas fa-star"></i> Must-See Attractions</h2>
                     <ul>
@@ -621,7 +193,6 @@
                     </ul>
                 </section>
                 
-                <!-- Useful Links Section -->
                 <section class="links-section">
                     <h2 class="section-title"><i class="fas fa-link"></i> Useful Links for Visitors</h2>
                     <div class="links-grid">
@@ -644,20 +215,18 @@
                     </div>
                 </section>
                 
-                <!-- Horizontal Ad Banner 2 -->
                 <div class="ad-banner horizontal" style="margin-top: 20px;">
                     <div class="ad-label">Advertisement</div>
                     <div class="ad-placeholder">
                         <i class="fas fa-car"></i>
                         <p>Car & Scooter Rental Services</p>
-                        <p style="font-size: 0.7rem; margin-top: 5px;">(Ad space for local businesses)</p>
+                        <p style="font-size: 0.7rem; margin-top: 5px;">AdSense ads will appear here</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Footer -->
     <footer>
         <div class="container">
             <div class="footer-content">
@@ -665,35 +234,31 @@
                     <i class="fas fa-umbrella-beach"></i>
                     <h2>Kos Island Guide</h2>
                 </div>
-                
-                <div class="footer-links">
-                    <a href="#">Privacy Policy</a>
-                    <a href="#">Terms of Use</a>
-                    <a href="#">About This Site</a>
+                <div style="margin: 20px 0;">
+                    <a href="#" style="color: #ddd; margin: 0 15px; text-decoration: none;">Privacy Policy</a>
+                    <a href="#" style="color: #ddd; margin: 0 15px; text-decoration: none;">Terms of Use</a>
+                    <a href="#" style="color: #ddd; margin: 0 15px; text-decoration: none;">About</a>
                 </div>
-                
-                <p class="copyright">© 2023 Kos Island Guide. All information provided for general guidance only.</p>
-                <p class="copyright" style="font-size: 0.8rem;">Best time to visit recommendations based on temperature, business openings, and price analysis.</p>
+                <p style="font-size: 0.9rem; color: #aaa; margin-top: 15px;">© 2023 Kos Island Guide. Information for general guidance.</p>
+                <p style="font-size: 0.8rem; color: #888; margin-top: 10px;">This site uses Google AdSense to display relevant ads.</p>
             </div>
         </div>
     </footer>
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            // Simulate ad rotation (in a real site, this would be ad code)
-            const adPlaceholders = document.querySelectorAll('.ad-placeholder p:nth-child(2)');
+            // Ad rotation simulation
             const adTexts = [
                 'Travel agency ad - Book your Kos trip now!',
                 'Hotel & Accommodation Ads',
                 'Car & Scooter Rental Services',
                 'Best restaurant deals in Kos!',
                 'Guided tours and excursions',
-                'Ferry ticket discounts available',
-                'Travel insurance for your trip',
-                'Beach equipment rentals'
+                'Ferry ticket discounts available'
             ];
+            const adPlaceholders = document.querySelectorAll('.ad-placeholder p:nth-child(2)');
             
-            // Change ad text every 10 seconds (simulating ad rotation)
+            // Change ad text every 10 seconds
             setInterval(function() {
                 adPlaceholders.forEach(placeholder => {
                     const randomAd = adTexts[Math.floor(Math.random() * adTexts.length)];
@@ -701,12 +266,8 @@
                 });
             }, 10000);
             
-            // Add click tracking for weather link (for analytics)
-            const weatherLink = document.querySelector('.weather-link');
-            weatherLink.addEventListener('click', function() {
-                console.log('Weather link clicked - redirecting to Meteo.gr');
-                // In a real site, you could send analytics data here
-            });
+            // Initialize AdSense ads (once AdSense is fully approved and configured)
+            // (adsbygoogle = window.adsbygoogle || []).push({});
         });
     </script>
 </body>
